@@ -1,12 +1,12 @@
 const express = require('express');
 const dotenv = require('dotenv')
-const patientRouter = require('../routes/patients');
-const doctorRouter = require('../routes/doctors');
-const authRouter = require('../auth/auth');
+const patientRouter = require('./routes/patients');
+const doctorRouter = require('./routes/doctors');
+const authRouter = require('./auth/auth');
 const cors = require('cors');
-const {verify_doctor} = require('../middleware/verify_doctor');
-const{verify_patient} = require('../middleware/verify_patients');
-const db = require('../db/db');
+const {verify_doctor} = require('./middleware/verify_doctor');
+const{verify_patient} = require('./middleware/verify_patients');
+const db = require('./db/db');
 dotenv.config();
 const PORT = process.env.DB_PORT || 3000;
 
